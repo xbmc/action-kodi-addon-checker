@@ -29,7 +29,7 @@ jobs:
       uses: actions/checkout@v1
     - name: Kodi addon checker validation
       id: kodi-addon-checker
-      uses: enen92/action-kodi-addon-checker@v0.4
+      uses: enen92/action-kodi-addon-checker@v1.0
       with:
         kodi-version: 'leia'
 
