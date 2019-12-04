@@ -1,0 +1,13 @@
+# action.yml
+name: 'Kodi addon checker action'
+description: 'Automatically checks your addon codebase against common mistakes and Kodi official repository rules.'
+inputs:
+  kodi-version:  # Equivalent to the branch in github.com/xbmc/repo-scripts or github.com/xbmc/repo-plugins
+    description: 'Minimal kodi version where this addon should work (gotham, helix, isengard, jarvis, krypton, leia, matrix)'
+    required: true
+    default: 'matrix'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.kodi-version }}
