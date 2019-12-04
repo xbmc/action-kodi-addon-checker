@@ -8,7 +8,7 @@ This action automatically runs [kodi-addon-checker](https://github.com/xbmc/addo
 
 ### `kodi-version`
 
-**Required** The name of the minimal kodi version your addon is supposed to support. Default `"matrix"`.
+**Required** The name of the minimal kodi version your addon is supposed to support. Default `"leia"`.
 This is equivalent to the **branch** name where your addon lives in the official kodi repository ([repo-plugins](https://github.com/xbmc/repo-plugins/branches) or [repo-scripts](https://github.com/xbmc/repo-scripts/branches)).
 
 ## Example usage
