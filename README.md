@@ -8,12 +8,12 @@ This action automatically runs [kodi-addon-checker](https://github.com/xbmc/addo
 
 ### `kodi-version`
 
-**Required** The name of the minimal kodi version your addon. Default `"matrix"`.
-This is equivalent to the **branch** name where your addon lives in the kodi repository ([repo-plugins](https://github.com/xbmc/repo-plugins/branches) or [repo-scripts](https://github.com/xbmc/repo-scripts/branches)).
+**Required** The name of the minimal kodi version your addon is supposed to support. Default `"matrix"`.
+This is equivalent to the **branch** name where your addon lives in the official kodi repository ([repo-plugins](https://github.com/xbmc/repo-plugins/branches) or [repo-scripts](https://github.com/xbmc/repo-scripts/branches)).
 
 ## Example usage
 
-To use this action in your github repository you need to have your addon code in the root directory of your repository. The following example performs the addon validation on each push against taking into account you plan to submit your addon to the `leia` branch.
+To use this action in your github repository you need to have your addon code in the root directory of your github repository. The following example performs the addon validation on each git push taking into account you plan to submit your addon to the `leia` branch (thus taking into account the leia rules).
 
 ```yaml
 name: Kodi Addon-Check
