@@ -10,6 +10,8 @@ The action assumes you have your addon in the root path of your repository.
 ### `kodi-version`
 
 **Required** The name of the minimal kodi version your addon is supposed to support (Default `"leia"`).
+This is equivalent to the **branch** name where your addon lives in the official kodi repository ([repo-plugins](https://github.com/xbmc/repo-plugins/branches) or [repo-scripts](https://github.com/xbmc/repo-scripts/branches)).
+
 
 ### `addon-id`
 
@@ -19,7 +21,9 @@ The action assumes you have your addon in the root path of your repository.
 
 **optional** If the action is being run as part of a pull request validation, normally used when the action is used as a step in automated submissions (Default `false`).
 
-This is equivalent to the **branch** name where your addon lives in the official kodi repository ([repo-plugins](https://github.com/xbmc/repo-plugins/branches) or [repo-scripts](https://github.com/xbmc/repo-scripts/branches)).
+## `rewrite-for-matrix`
+
+**optional** If the addon.xml should be re-written for kodi matrix - usefull if you are using the same branch to submit to two different branches (Default `false`).
 
 ## Example usage
 

@@ -7,6 +7,7 @@ RUN apk update && \
 RUN python -m pip install --upgrade pip && \
     pip install kodi-addon-checker
 
+COPY tools/modify_addonxml_matrix.py /modify_addonxml_matrix.py
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

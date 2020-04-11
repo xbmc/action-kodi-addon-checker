@@ -14,6 +14,10 @@ inputs:
     description: 'If the validation is being run as part of a pull request'
     required: false
     default: false
+  rewrite-for-matrix:
+      description: 'If the addon.xml should be re-written for matrix (default false)'
+      required: false
+      default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -21,3 +25,4 @@ runs:
     - ${{ inputs.kodi-version }}
     - ${{ inputs.addon-id }}
     - ${{ inputs.is-pr }}
+    - ${{ inputs.rewrite-for-matrix }}

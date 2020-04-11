@@ -23,6 +23,10 @@ fi
 mkdir -p $ADDON_DIR
 tar zxf ./dist/addon-checker/addon.tar -C $ADDON_DIR
 
+if [ "$4" = true ] ; then
+  python3 /modify_addonxml_matrix.py $ADDON_DIR
+fi
+
 
 if [ "$3" = true ] ; then
   kodi-addon-checker --branch=$1 $FOLDER_ID_MISMATCH --PR $ADDON_DIR
