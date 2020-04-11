@@ -6,8 +6,18 @@ inputs:
     description: 'Minimal kodi version where this addon should work (gotham, helix, isengard, jarvis, krypton, leia, matrix)'
     required: true
     default: 'leia'
+  addon-id:
+    description: 'The addon id (default empty and folder id mismatch is set to true)'
+    required: false
+    default: ''
+  is-pr:
+    description: 'If the validation is being run as part of a pull request'
+    required: false
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.kodi-version }}
+    - ${{ inputs.addon-id }}
+    - ${{ inputs.is-pr }}
