@@ -1,4 +1,4 @@
-FROM python:3.7.5-alpine3.10
+FROM python:3.8-alpine
 
 RUN apk update && \
     apk --update add libxml2-dev libxslt-dev libffi-dev gcc musl-dev libgcc openssl-dev curl && \
