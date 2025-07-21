@@ -8,6 +8,9 @@ fi
 # create output directory
 mkdir -p dist/addon-checker
 
+# fix detected dubious ownership in repository at '/github/workspace'
+git config --global --add safe.directory $PWD
+
 # create the addon zip
 git archive --output=./dist/addon-checker/addon.tar --format=tgz HEAD
 
